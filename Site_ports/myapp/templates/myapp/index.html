@@ -1,5 +1,17 @@
 {% extends 'myapp/base.html' %}
+{% load static %}
 
 {% block content %}
-<h2> Привет Мир! </h2>
- {% endblock %}
+<h2> Информация о создании сайта-портфолио включает в себя несколько ключевых аспектов: цель, планирование, дизайн, содержание, технологический стек и продвижение. </h2>
+
+<img src="{% static 'myapp/images/5fd531dca6427c7_upscaled.jpeg' %}" width ='400' height = '350' alt="Моя картинка">
+
+<h1>Список работ</h1>
+<ul>
+    {% for work in works %}
+        <li>
+            <strong>{{ work.title }}</strong>: {{ work.description }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
