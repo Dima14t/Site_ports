@@ -10,8 +10,12 @@
 <ul>
     {% for work in works %}
         <li>
-            <strong>{{ work.title }}</strong>: {{ work.description }}
+          <p> <strong>{{ work.title }}</strong>: </p>   {{ work.description }}
+             <img src="{{ work.image.url }}" alt="КАРТИНКА" width ='400' height = '350' >
         </li>
+
+
+
     {% endfor %}
 </ul>
 {% endblock %}
